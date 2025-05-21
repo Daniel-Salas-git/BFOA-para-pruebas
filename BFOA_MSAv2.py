@@ -98,8 +98,6 @@ def graficar_resultados(self, fitness_results, nfe_results):
 
     plt.tight_layout()
     plt.show()
-    
-    # ...existing code...
 
 def run_experiment():
     poblacion = []
@@ -126,7 +124,7 @@ def run_experiment():
     return bestBacteria.fitness, globalNFE, bestBacteria
 
 # Ejecutar varias rondas y guardar los mejores resultados
-num_rondas = 100  # Cambia este valor para más repeticiones
+num_rondas = 100  
 resultados = []
 
 for ronda in range(num_rondas):
@@ -145,5 +143,3 @@ for idx, (fitness, nfe, _) in enumerate(resultados):
 mejor_bacteria = resultados[0][2]
 mejor_bacteria.showGenome()
 validaSecuencias(path, mejor_bacteria)
-
-# ...resto del código...
